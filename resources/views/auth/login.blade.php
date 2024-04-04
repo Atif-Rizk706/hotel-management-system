@@ -7,27 +7,30 @@
                 <div class="login-left"> <img class="img-fluid" src="https://www.dawsonareadevelopment.com/wp-content/uploads/2016/10/hospitality-icon.png" alt="Logo"> </div>
                 <div class="login-right">
                     <div class="login-right-wrap">
+
+
                         <h1>Login</h1>
-                        <p class="account-subtitle">Access to our dashboard</p>
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <div class="form-group">
-                                <input id="email" placeholder="Email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus> </div>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            {{--message--}}
+                            {!! Toastr::message() !!}
+                            <p class="account-subtitle">Access to our dashboard</p>
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <input id="email" placeholder="Email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus> </div>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
-                            @enderror
-                            <div class="form-group">
-                                <input id="password" placeholder="Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                @enderror
+                                <div class="form-group">
+                                    <input id="password" placeholder="Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                            <div class="form-group">
+                                    @enderror
+                                </div>          <div class="form-group">
                                 <button class="btn btn-primary btn-block" type="submit">Login</button>
                             </div>
                         </form>

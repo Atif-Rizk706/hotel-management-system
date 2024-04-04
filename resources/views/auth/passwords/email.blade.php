@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Hotel login</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.dawsonareadevelopment.com/wp-content/uploads/2016/10/hospitality-icon.png">
-    <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/plugins/fontawesome/css/all.min.css')}}">
-    <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
-    <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/css/style.css')}}"> </head>
-
-<body>
+@extends('layouts.app')
+@section('content')
 <div class="main-wrapper login-body">
     <div class="login-wrapper">
         <div class="container">
@@ -21,11 +9,8 @@
                     <div class="login-right-wrap">
                         <h1>Forgot Password?</h1>
                         <p class="account-subtitle">Enter your email to get a password reset link</p>
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+                        {{--message--}}
+                        {!! Toastr::message() !!}
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
                             <div class="form-group">
@@ -48,10 +33,6 @@
         </div>
     </div>
 </div>
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
-</body>
+@endsection
 
-</html>
+

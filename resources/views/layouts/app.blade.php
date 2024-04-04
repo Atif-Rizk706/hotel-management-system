@@ -7,6 +7,7 @@
     <title>Hotel login</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://www.dawsonareadevelopment.com/wp-content/uploads/2016/10/hospitality-icon.png">
     <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/css/bootstrap.min.css')}}">
+    <link href="{{ asset('vendor/toastr/toastr.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/css/feathericon.min.css')}}">
     <link rel="stylesheet" href="{{\Illuminate\Support\Facades\URL::to('assets/plugins/morris/morris.css')}}">
@@ -22,6 +23,7 @@
 <script src="{{\Illuminate\Support\Facades\URL::to('assets/js/bootstrap.min.js')}}"></script>
 <script src="{{\Illuminate\Support\Facades\URL::to('assets/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 <script src="{{\Illuminate\Support\Facades\URL::to('assets/js/script.js')}}"></script>
+<script src="{{ asset('vendor/toastr/toastr.min.js') }}"></script>
 </body>
 
 </html>
