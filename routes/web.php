@@ -33,4 +33,6 @@ use Illuminate\Support\Facades\Route;
 
         //.......................... booking ...............//
     Route::get('form/all-booking', [App\Http\Controllers\BookingController::class, 'all_booking'])->middleware('auth')->name('all_booking');
-    Route::get('form/booking/edit-book', [App\Http\Controllers\BookingController::class, 'edit_book'])->middleware('auth')->name('edit_book');
+    Route::get('form/booking/edit-book', [App\Http\Controllers\BookingController::class, 'edit_booking'])->middleware('auth')->name('edit_booking');
+    Route::get('form/booking/add-book', [App\Http\Controllers\BookingController::class, 'add_booking'])->middleware('auth')->name('add_booking');
+    Route::post('form/booking/save-book', [App\Http\Controllers\BookingController::class, 'save_booking'])->middleware('auth')->name('save_booking');

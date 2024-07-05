@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Hotel Dashboard Template</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.bing.com/images/blob?bcid=qCXdxpzQaTMGOw">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.dawsonareadevelopment.com/wp-content/uploads/2016/10/hospitality-icon.png">
     <link rel="stylesheet" href="{{ \Illuminate\Support\Facades\URL::to('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ \Illuminate\Support\Facades\URL::to('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{ \Illuminate\Support\Facades\URL::to('assets/plugins/fontawesome/css/all.min.css')}}">
@@ -24,7 +24,6 @@
     <div class="header">
         <div class="header-left">
             <a href="index.html" class="logo"> <img src="https://www.dawsonareadevelopment.com/wp-content/uploads/2016/10/hospitality-icon.png" width="50" height="70" alt="logo"> <span class="logoclass">HOTEL</span> </a>
-            <a href="index.html" class="logo logo-small"> <img src="{{\Illuminate\Support\Facades\URL::to('assets/img/hotel_logo.png')}}" alt="Logo" width="30" height="30"> </a>
         </div>
         <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
         <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
@@ -132,8 +131,8 @@
                     <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
                         <ul class="submenu_class" style="display: none;">
                             <li><a href="{{route('all_booking')}}"> All Booking </a></li>
-                            <li><a href="{{route('edit_book')}}"> Edit Booking </a></li>
-                            <li><a href="add-booking.html"> Add Booking </a></li>
+                            <li><a href="{{route('edit_booking')}}"> Edit Booking </a></li>
+                            <li><a href="{{route('add_booking')}}"> Add Booking </a></li>
                         </ul>
                     </li>
                     <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
@@ -269,9 +268,8 @@
     </div>
     @yield('content')
 </div>
-@yield('script')
 
-<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+{{--<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>--}}
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/jquery-3.5.1.min.js')}}"></script>
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/popper.min.js')}}"></script>
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/bootstrap.min.js')}}"></script>
@@ -279,10 +277,13 @@
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/plugins/raphael/raphael.min.js')}}"></script>
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/plugins/morris/morris.min.js')}}"></script>
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/chart.morris.js')}}"></script>
-<script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/moment.min.js"></script')}}"></script>
-<script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/bootstrap-datetimepicker.min.js')}}"></script>
+<script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/moment.min.js')}}"></script>
 <script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/script.js')}}"></script>
-<script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/moment.min.js"></script')}}"></script>
+<script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/moment.min.js')}}"></script>
+<script src="{{ \Illuminate\Support\Facades\URL::to('assets/js/bootstrap-datetimepicker.min.js')}}"></script>
+
+@yield('script')
+
 </body>
 
 </html>

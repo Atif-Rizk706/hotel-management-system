@@ -2,16 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MyFormRequest;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    //   function to show all booking
+    //  all booking
      public function all_booking(){
          return view('formBooking.allBooking');
      }
-    //   function to show edit booking
-    public function edit_book(){
+    //   edit booking
+    public function edit_booking(){
         return view('formBooking.editBooking');
+    }
+    //   add booking
+    public function add_booking(){
+        return view('formBooking.addBooking');
+    }
+    //   save booking
+    public function save_booking(MyFormRequest $request){
+
+        $validatedData = $request->validated();
+         dd($validatedData);
+
     }
 }

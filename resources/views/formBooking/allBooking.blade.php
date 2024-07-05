@@ -7,7 +7,7 @@
                 <div class="col">
                     <div class="mt-5">
                         <h4 class="card-title float-left mt-2">Appointments</h4>
-                        <a href="add-booking.html" class="btn btn-primary float-right veiwbutton ">Add Booking</a>
+                        <a href="{{route('add_booking')}}" class="btn btn-primary float-right veiwbutton ">Add Booking</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                                     </td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right"> <a class="dropdown-item" href="{{route('edit_book')}}"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a> </div>
+                                            <div class="dropdown-menu dropdown-menu-right"> <a class="dropdown-item" href="{{route('edit_booking')}}"><i class="fas fa-pencil-alt m-r-5"></i> Edit</a> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i> Delete</a> </div>
                                         </div>
                                     </td>
                                 </tr>
